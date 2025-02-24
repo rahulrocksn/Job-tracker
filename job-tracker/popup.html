@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Application Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      padding: 10px;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 5px 0;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    .application-list {
+      margin-top: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .application-item {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    .application-item:last-child {
+      border-bottom: none;
+    }
+    .status {
+      margin-top: 10px;
+      font-style: italic;
+      color: #666;
+    }
+    .not-tracking {
+      color: #d93025;
+    }
+    .tracking {
+      color: #188038;
+    }
+  </style>
+</head>
+<body>
+  <h2>Job Application Tracker</h2>
+  <div id="currentPage">
+    <div id="status"></div>
+    <button id="trackButton">Start Tracking This Job</button>
+    <button id="markApplied">Mark as Applied</button>
+    <button id="removeButton" style="display:none">Remove from Applied</button>
+  </div>
+  <h3>Applied Jobs</h3>
+  <div id="applications" class="application-list">
+    <div class="application-item">No applications tracked yet.</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
